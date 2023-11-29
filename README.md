@@ -1,6 +1,6 @@
 # Create React Web Component
 
-![NPM Version](https://img.shields.io/npm/v/@geops/create-react-web-component.svg)
+[![NPM Version](https://img.shields.io/npm/v/@geops/create-react-web-component.svg)](https://www.npmjs.com/package/@geops/create-react-web-component)
 [![Github License](https://img.shields.io/github/license/Silind/create-react-web-component)](https://github.com/Silind-Software/create-react-web-component/blob/master/LICENSE)
 ![Build Status](https://github.com/oterral/create-react-web-component/workflows/build/badge.svg)
 

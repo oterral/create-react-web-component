@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": true,
     "target": "es6",
-    "module": "es6",
-    "lib": ["es6", "dom"],
-    "declaration": true,
-    "outDir": "dist",
-    "rootDirs": ["src"],
     "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "declaration": true,
+    // This compiler run should
+    // only output d.ts files
+    // "emitDeclarationOnly": true,
+    // go to js file when using IDE functions like
+    // "Go to Definition" in VSCode
+    "declarationMap": true,
     "skipLibCheck": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom"],
     "jsx": "react"
   },
+  "include": ["./src/**/*"],
   "exclude": [
     "node_modules",
     "dist",

@@ -79,6 +79,7 @@ class CustomComponent extends HTMLElement {
     if (shadow !== undefined && !shadow) {
       this.root.render(application);
     } else {
+      // @ts-ignore
       const root = createProxy({ div: undefined });
       this.root.render(<root.div>{application}</root.div>);
     }
