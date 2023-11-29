@@ -67,5 +67,4 @@ This project is licensed under the [MIT License](https://github.com/Silind-Softw
 ## Get Help
 Read more about using Web Components with React on the [official React Docs](https://reactjs.org/docs/web-components.html)  
 
-- Contact me on [Twitter](https://twitter.com/silindsoftware)
-- If appropriate, [open an issue](https://github.com/Silind-Software/create-react-web-component/issues/new) on GitHub
+- If appropriate, [open an issue](https://github.com/oterral/create-react-web-component/issues/new) on GitHub
