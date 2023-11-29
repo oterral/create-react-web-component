@@ -1,10 +1,8 @@
 {
   "name": "@geops/create-react-web-component",
-  "version": "3.0.2-beta.0",
+  "version": "3.0.2-beta.1",
   "description": "Set up a React App wrapped in a Web Component",
-  "main": "dist/src/index.js",
   "module": "index.js",
-  "type": "module",
   "scripts": {
     "build": "tsc --build",
     "test": "jest",
@@ -75,5 +73,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "style-it": "2.1.4"
-  }
+  },
+  "sideEffects": "false"
 }
