@@ -3,8 +3,8 @@
  * If you are linking this project use this script to create a new build
  */
 
-const { execSync } = require('child_process');
-const chalk = require('chalk');
+import { execSync } from 'child_process';
+import chalk from 'chalk';
 
 console.log(chalk.white(' ✓ Removing old dependencies'));
 execSync('yarn cleanup');

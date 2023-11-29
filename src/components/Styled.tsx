@@ -29,6 +29,7 @@ const withStyles = (styles: CSSProperties) => <P, S>(WrappedComponent: Component
       return (
         <Styled styles={styles}>
           <div>
+            {/* @ts-ignore */}
             <WrappedComponent {...(this.props as P)} />
           </div>
         </Styled>

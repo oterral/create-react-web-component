@@ -3,16 +3,16 @@
  * These will not be installed using yarn install or npm install, and needs to be installed manually
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
+import  { execSync } from 'child_process';
+import fs from 'fs';
 
-const package = require('../package.json');
-const peerDeps = package.peerDependencies;
+import packageJson from '../package.json'  assert { type: "json" };
+const peerDeps = packageJson.peerDependencies;
 
-Object.entries(peerDeps).forEach(([package, version]) => {
-  const cmd = `yarn add ${package}@${version}`;
+Object.entries(peerDeps).forEach(([packageJson, version]) => {
+  const cmd = `yarn add ${packageJson}@${version}`;
   console.log('Executing: ', cmd);
   execSync(cmd);
 });
 
-fs.writeFileSync('package.json', JSON.stringify(package, null, 2), 'utf-8');
+fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2), 'utf-8');

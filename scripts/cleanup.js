@@ -3,8 +3,8 @@
  * Use this command to whipe all of the following files:
  */
 
-const { execSync } = require('child_process');
-const chalk = require('chalk');
+import { execSync } from 'child_process';
+import chalk from 'chalk';
 
 console.log(chalk.white(' ✓ Removing old dependencies'));
 

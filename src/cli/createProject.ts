@@ -108,6 +108,7 @@ async function copyTemplate(projectName: string, language: string) {
 
   const projectDirectory: string = await new Promise((resolve, reject) => {
     const projectDir = `${currentDirectory}/${projectName}`;
+    // @ts-ignore
     mkdirp(projectDir, (err) => {
       if (err) {
         reject('Could not create directory: ' + projectDir);
@@ -123,7 +124,7 @@ async function copyTemplate(projectName: string, language: string) {
         reject('Could not copy template files');
       }
 
-      resolve();
+      resolve(null);
     });
   });
 

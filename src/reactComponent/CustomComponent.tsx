@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Root, createRoot } from 'react-dom/client';
 import { createProxy } from 'react-shadow';
 import { EventProvider } from '../components/EventContext';
 
@@ -25,6 +25,8 @@ export const setMode = (shadowOption: boolean) => {
 };
 
 class CustomComponent extends HTMLElement {
+  root?: Root;
+
   public static get observedAttributes() {
     return Object.keys(componentAttributes).map((k) => k.toLowerCase());
   }
@@ -62,7 +64,7 @@ class CustomComponent extends HTMLElement {
   }
 
   public disconnectedCallback() {
-    ReactDOM.unmountComponentAtNode(this);
+    this.root?.unmount();
   }
 
   private mountReactApp() {
@@ -72,11 +74,13 @@ class CustomComponent extends HTMLElement {
       </EventProvider>
     );
 
+    this.root = createRoot(this);
+
     if (shadow !== undefined && !shadow) {
-      ReactDOM.render(application, this);
+      this.root.render(application);
     } else {
       const root = createProxy({ div: undefined });
-      ReactDOM.render(<root.div>{application}</root.div>, this);
+      this.root.render(<root.div>{application}</root.div>);
     }
   }
 

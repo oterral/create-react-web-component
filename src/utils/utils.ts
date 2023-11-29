@@ -49,12 +49,12 @@ export async function changeNameInfile(file: string, changeWhere: RegExp, change
   });
 
   await new Promise((resolve, reject) => {
-    fs.writeFile(file, changedFile, 'utf-8', err => {
+    fs.writeFile(file, changedFile as string, 'utf-8', err => {
       if (err) {
         reject('Could not write file');
       }
 
-      resolve();
+      resolve(null);
     });
   });
 }

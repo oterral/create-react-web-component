@@ -14,9 +14,9 @@ export async function cli(args: string[]) {
   console.log(chalk.yellow(box));
   try {
     createProject();
-  } catch (err) {
+  } catch (err: any) {
     console.log('');
     console.log('Something went wrong while setting up your project');
-    console.log('ERROR: ' + err.message);
+    console.log('ERROR: ' + err?.message);
   }
 }
