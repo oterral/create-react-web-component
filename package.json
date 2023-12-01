@@ -1,12 +1,12 @@
 {
   "name": "@geops/create-react-web-component",
-  "version": "3.0.4-beta.5",
+  "version": "3.0.4-beta.6",
   "description": "Set up a React App wrapped in a Web Component",
   "type": "module",
   "module": "dist/index.js",
   "scripts": {
-    "build": "tsc --build",
-    "format": "prettier --write '**.md' '**.ts' '**.json' ",
+    "build": "rm -rf dist && tsc --build",
+    "format": "prettier --write '**.md' '**.ts' '**.json' '**.js' ",
     "test": "jest"
   },
   "files": [
