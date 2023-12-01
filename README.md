@@ -6,58 +6,42 @@
 
 This project is a fork of the archived but great [SimonHoiberg/create-react-web-component](https://github.com/SimonHoiberg/create-react-web-component).
 
-It includes the React 18 support.
+It includes the React 18 support and removed all cli stuff.
 
-<br />
-<br />
-<br />
+### How to use it
 
-#### Set up a React App wrapped in a Web Component
-> This setup is is based on [*react-scripts*](https://www.npmjs.com/package/react-scripts) from [*create-react-app*](https://create-react-app.dev/docs/getting-started)  
-> A thorough description of the principles used in this setup, can be read [in this article](https://itnext.io/react-and-web-components-3e0fca98a593)
+In your project:
 
-<p align="center">
-  <img src="https://silind-s3.s3.eu-west-2.amazonaws.com/create-react-web-component-demo/create-react-web-component-demo2.gif" />
-</p>
-
-## Getting Started
-
-### Install
-Get started by running the command
 ```console
-npx create-react-web-component
+yarn add @geops/create-react-web-component
 ```
-Or install the package globally
 
-- yarn
-  ```console
-  yarn global add create-react-web-component
-  ```
+Create a js file:
 
-- npm
-  ```console
-  npm i -g create-react-web-component
-  ```
+```js
+import ReactWebComponent from "@geops/create-react-web-component";
+import MyReactComponent from "./MyReactComponent";
 
-This will bootstrap a new project for you.  
-Now use the following commands:
-```console
-cd <project-folder>
-yarn install
-yarn start
+ReactWebComponent.setAttributes(MyReactComponent.attributes);
+ReactWebComponent.setProperties(MyReactComponent.defaultProps);
+ReactWebComponent.render(MyReactComponent, "trafimage-maps", { shadow: false });
 ```
-Your project will start running on `localhost:3000` and your browser opens a new window  
-
-<p align="center">
-<img src="https://silind-s3.s3.eu-west-2.amazonaws.com/create-react-web-component-demo/create-react-web-component.png" />
-</p>
 
 ## Contributing
 
-#### Issues
+### Getting Started
+
+```console
+yarn install
+yarn test
+```
+
+### Issuess
+
 In the case of a bug report, bugfix or a suggestions, please feel very free to open an issue.
 
-#### Pull request
+### Pull request
+
 Pull requests are always welcome, and I'll do my best to do reviews as fast as I can.
 
 ## License
@@ -65,6 +49,7 @@ Pull requests are always welcome, and I'll do my best to do reviews as fast as I
 This project is licensed under the [MIT License](https://github.com/Silind-Software/create-react-web-component/blob/master/LICENSE)
 
 ## Get Help
-Read more about using Web Components with React on the [official React Docs](https://reactjs.org/docs/web-components.html)  
+
+Read more about using Web Components with React on the [official React Docs](https://reactjs.org/docs/web-components.html)
 
 - If appropriate, [open an issue](https://github.com/oterral/create-react-web-component/issues/new) on GitHub

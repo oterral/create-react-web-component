@@ -18,10 +18,5 @@
     "jsx": "react"
   },
   "include": ["./src/**/*"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "templates",
-    "test"
-  ]
+  "exclude": ["node_modules", "dist", "templates", "test"]
 }
