@@ -6,9 +6,9 @@
 
 This project is a fork of the archived but great [SimonHoiberg/create-react-web-component](https://github.com/SimonHoiberg/create-react-web-component).
 
-It includes the React 18 support and removed all cli stuff.
+It includes the React 18 support and removed all cli and styled stuff.
 
-### How to use it
+## How to use it
 
 In your project:
 
@@ -16,15 +16,44 @@ In your project:
 yarn add @geops/create-react-web-component
 ```
 
-Create a js file:
+Creates the web-component using your React component:
 
 ```js
 import ReactWebComponent from "@geops/create-react-web-component";
 import MyReactComponent from "./MyReactComponent";
 
+const attributes = {
+  stringAttribute: "default value",
+}
+
+const props = {
+  objectProp: { "key": "value"}
+  arrayProp: ["foo"]
+}
+
 ReactWebComponent.setAttributes(MyReactComponent.attributes);
 ReactWebComponent.setProperties(MyReactComponent.defaultProps);
-ReactWebComponent.render(MyReactComponent, "trafimage-maps", { shadow: false });
+ReactWebComponent.render(MyReactComponent, "my-web-component", { shadow: false });
+```
+
+Then load your module in a HTML page
+
+```html
+<html>
+  <head>
+    <script type="text/javascript" src="your module bundle file"> </script>
+  </head>
+  <body>
+    <my-web-component id="myWebComponent" string="foo"></my-web-component>
+    <script>
+      const elt = doucment.getElementById('myWebComponent');
+
+      console.log(elt.stringAttribute); // --> "default value"
+      console.log(elt.objectProp); // --> "{ "key": "value" }"
+      console.log(elt.arrayProp); // --> "['foo']"
+    </script>
+  </body>
+</html>
 ```
 
 ## Contributing
