@@ -1,17 +1,15 @@
 {
   "name": "@geops/create-react-web-component",
-  "version": "3.0.4-beta.11",
+  "version": "3.0.4-beta.12",
   "description": "Set up a React App wrapped in a Web Component",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "exports": {
-    ".": "./index.js",
-    "./dist": "./dist/index.js"
+    ".": "./dist/index.js"
   },
   "files": [
-    "dist/*",
-    "index.js"
+    "dist/*"
   ],
   "scripts": {
     "build": "rm -rf dist && tsc --build",
@@ -37,7 +35,7 @@
     "react-shadow": "^20.4.0"
   },
   "devDependencies": {
-    "@geops/create-react-web-component": "^3.0.4-beta.10",
+    "@geops/create-react-web-component": "^3.0.4-beta.11",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.0",
     "@types/react": "18.2.39",
