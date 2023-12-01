@@ -1,6 +1,6 @@
 {
   "name": "@geops/create-react-web-component",
-  "version": "3.0.4-beta.9",
+  "version": "3.0.4-beta.10",
   "description": "Set up a React App wrapped in a Web Component",
   "type": "module",
   "main": "dist/index.js",
@@ -9,14 +9,15 @@
     ".": "./index.js",
     "./dist": "./dist/index.js"
   },
+  "files": [
+    "dist/*",
+    "./index.js"
+  ],
   "scripts": {
     "build": "rm -rf dist && tsc --build",
     "format": "prettier --write '**.md' '**.ts' '**.json' '**.js' ",
     "test": "jest"
   },
-  "files": [
-    "dist/*"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oterral/create-react-web-component.git"
